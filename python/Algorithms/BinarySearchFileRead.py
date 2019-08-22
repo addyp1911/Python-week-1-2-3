@@ -24,17 +24,9 @@ class BinarySearch:
 
 file1 = open(r"/home/admin1/Desktop/sample.txt",'r')
 file_content=file1.read().split()
-
-i=0
-lst=[]
-print(file_content)
-for i in file_content:
-    lst.append(i)
-#print(lst) 
-lst.sort()
-#print(lst)    
-str=input("enter the element you want to search in the file= ")
-result=BinarySearch.binarySearch(lst,str)
+file_content.sort()    
+string=input("enter the element you want to search in the file= ")
+result=BinarySearch.binarySearch(file_content,string)
 if(result==True):
     print("the word is found")
 else:

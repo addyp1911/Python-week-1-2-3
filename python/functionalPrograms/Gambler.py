@@ -11,7 +11,7 @@ class Gambler:
         while(i<=noOfTimes):
             bets+=1
             while(cash>0 & cash<=goals):
-                if(random.random()<0.5):
+                if(random.uniform(0,1)<0.5):
                     cash+=1
                 else:
                     cash-=1 

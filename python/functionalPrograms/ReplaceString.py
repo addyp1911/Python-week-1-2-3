@@ -1,7 +1,7 @@
 
 class ReplaceString:
-            str="Hello <<username>> how are you ?"
-            print(str)
-            a=input("enter your name ")
-            str1=str.replace("<<username>>",a)
-            print(str1)
+    string="Hello <<username>> how are you ?"
+    print(string)
+    a=input("enter your name ")
+    str1=string.replace("<<username>>",a)
+    print(str1)

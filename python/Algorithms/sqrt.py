@@ -6,14 +6,14 @@
 #  where epsilon = 1e-15
 class squareroot:
     def sqrt(c):
-        t=float(c)
+        t=c
         epsilon=1.0e-15
         rs=epsilon*t
         i=abs(t- c//t)
         while(i>rs):
-            t=c/t + t/2
+            t=(c/t + t)/2
 
         print(t)
 #driver code
-c=int(input("enter a non negative number= "))
+c=float(input("enter a non negative number= "))
 squareroot.sqrt(c)
