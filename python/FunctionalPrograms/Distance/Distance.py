@@ -3,6 +3,9 @@
 # The formulae to calculate distance = sqrt(x*x + y*y). Use Math.power function
 
 import DistanceBL
-x=int(input("enter the x coordinate of the point"))
-y=int(input("enter the y coordinate of the point"))
+try:
+    x=int(input("enter the x coordinate of the point= "))
+    y=int(input("enter the y coordinate of the point= "))
+except(TypeError):
+    print("valid input needed, string or float inputs not allowed")    
 DistanceBL.calculateDistance(x,y)

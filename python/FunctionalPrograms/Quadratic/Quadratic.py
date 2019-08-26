@@ -8,9 +8,14 @@
 
     
 import QuadraticBL
+
 print("we are goin to print the quadratic equation of the order a*x*x+ b*x+c")
-a=int(input("enter the value of a= "))
-b=int(input("enter the value of b= "))
-c=int(input("enter the value of c= "))
+try:
+    a=int(input("enter the value of a= "))
+    b=int(input("enter the value of b= "))
+    c=int(input("enter the value of c= "))
+except(TypeError):
+    print("enter valid integer coefficients for the quadratic equation")
+        
 
 QuadraticBL.roots(a,b,c)

@@ -4,5 +4,9 @@
 # c. O/P -> Percentage of Head vs Tails
 
 import FlipCoinBL
-noOfTimes=int(input("enter the no of times the coin is flipped= "))
-FlipCoinBL.check(noOfTimes)            
+try:
+    nooftimes = int(input("enter the no of times the coin is flipped= "))
+except:
+    print("enter the valid positive integer input for the number of times a coin is flipped") 
+
+FlipCoinBL.check(nooftimes)            

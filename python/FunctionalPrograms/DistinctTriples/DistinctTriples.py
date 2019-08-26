@@ -6,10 +6,19 @@
 # as well as the second output is to print the distinct triplets.
 
     
-import DistinctTriplesBL           
-arr=[-2,3,4,-2,5,0,-1,-4,3,4,4,4,4]
-arr1=sorted(arr)
-DistinctTriplesBL.findTriplets(arr1,len(arr))
+import DistinctTriplesBL     
+try:
+    arr=[]     
+    size=int(input("enter the size of the array= "))
+    
+    for i in range(size):
+        num=int(input("enter the elements to be added to the array= "))
+        arr.append(num)
+except:
+    print("enter the valid integer input for the data")
+
+new_arr=sorted(arr)
+DistinctTriplesBL.findtytriplets(new_arr,size)
 
 
 

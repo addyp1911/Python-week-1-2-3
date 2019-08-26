@@ -1,13 +1,21 @@
+#Binarysearch algorithm to search for a user entered integer from an array of integers
+
 import BinarySearchIntegerBL as bs
-arr=[]
-num=int(input("enter the size of the array= "))
-for i in range(0,num+1):
-    a=int(input("enter the element= "))
+
+arr=[]                                             #empty list is initialised
+
+size=int(input("enter the size of the array= "))
+
+for i in range(0,size):
+
+    a=int(input("enter the element= "))               #type casting the element to be searched into int type
     arr.append(a)
+
 arr.sort()
-t=int(input("enter the element you want to search:="))
-res=bs.search(arr,t) 
-if(res):
+
+searchnumber=int(input("enter the element you want to search= "))
+result=bs.search(arr,searchnumber) 
+if(result):
     print("the element is found in the list")
 else:
     print("the element is not found in the list") 

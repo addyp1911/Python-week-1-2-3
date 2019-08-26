@@ -1,6 +1,9 @@
-
+# ----------------------------------TwoDimArray prg-----------------------------------------------
+# TwoDimArray.py
+# date : 26/08/2019
+# method to enter a two dimensional array
 def printArray(row,col):  
-    matrix=[]
+    matrix=[]               #empty list initiliased
     for p in range(0,row):
             A=[]
     for k in range(0,col): 

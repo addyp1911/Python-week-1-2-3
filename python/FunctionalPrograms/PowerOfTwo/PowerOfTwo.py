@@ -6,9 +6,8 @@
 
 
 import PowerOfTwoBL
-a=input("enter the highest power of 2 ")
-if(a>=0 and a<31):
-    num=int(a)
-else:
-    print("invalid input")    
-PowerOfTwoBL.calulate(num) 
+try:
+    num=int(input("enter the highest power of 2= "))
+except(ValueError):
+    print("user please enter the valid power ,it should be greater than 0 and less than 31")      
+PowerOfTwoBL.calculate(num) 

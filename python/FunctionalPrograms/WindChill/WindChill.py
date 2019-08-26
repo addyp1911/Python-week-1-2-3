@@ -5,7 +5,10 @@
 #Note: the formula is not valid if t is larger than 50 in absolute value or if v is larger than 120 or less than 3 
 
 import WindChillBL 
-temp=float(input("enter the temperature in fahrenheit"))
-windspeed=float(input("enter the windspeed in miles per hour"))
-   
-WindChillBL.disp(temp,windspeed)
+try:
+    temperature=float(input("enter the temperature in fahrenheit= "))
+    windspeed=float(input("enter the windspeed in miles per hour= "))
+except(TypeError):
+    print("user please input the valid inputs for temperature and windspeeds")
+
+WindChillBL.display(temperature,windspeed)

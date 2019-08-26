@@ -9,7 +9,11 @@
 # and second list of Rs Notes that would given in the Change
 
 import VendingMachineBL
-amount=int(input("print the bill of the product bought= "))
+try:
+    amount=int(input("enter the bill of the product bought= "))
+except(TypeError):
+    print("user please enter the valid input")
+     
 VendingMachineBL.calculateChange(amount)
 
 

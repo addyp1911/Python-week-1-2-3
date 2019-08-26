@@ -7,6 +7,10 @@
  #with OutputStreamWriter to print the output to the screen.
 
 import TwoDimArrayBL
-M=int(input("enter the number of rows in the array: "))
-N=int(input("enter the number of columns in the array: "))  
-TwoDimArrayBL.disp(M,N)    
+try:
+    row = int(input("enter the number of rows in the array: "))
+    column = int(input("enter the number of columns in the array: "))  
+except(TypeError):
+    print("enter the valid integer input for the number of rows and columns")
+
+TwoDimArrayBL.display(row,column)    

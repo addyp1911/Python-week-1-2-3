@@ -1,3 +1,7 @@
+# ----------------------------------bubblesort prg-----------------------------------------------
+# BubbleSort.py
+# date : 26/08/2019
+# method to sort a user entered array of strings using bubble sort algorithm
 def bubbleSort(arr,n):
     for i in range(0,n):
         for j in range(0,n-i-1):

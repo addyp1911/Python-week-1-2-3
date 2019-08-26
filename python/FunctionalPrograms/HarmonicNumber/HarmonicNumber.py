@@ -7,6 +7,9 @@
 
 
 import HarmonicNumberBL
-a=input("Enter the value") 
-num=int(a)
-HarmonicNumberBL.countHarmonic(num)
+try:
+    num=int(input("Enter the value for the nth harmonic number= ")) 
+except(TypeError,ValueError):
+    print("user please enter a positive integer value greater than or equal to 1")
+
+HarmonicNumberBL.countharmonic(num)

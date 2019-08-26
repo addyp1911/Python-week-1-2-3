@@ -6,9 +6,17 @@
 #   recursively sort the two subarrays a[lo, mid) and a[mid, hi), and merge them to produce a sorted result.
 
 import MergeSortBL 
-arr=[8,9,2,4,5] 
+
+arr=[]
+size = int(input("enter the size of the array to be sorted= "))
+
+for i in range(size):
+    num = int(input("enter the element of the array= "))
+    arr.append(num)
+
 print("the unsorted array is= ",arr)
-r=len(arr)-1
-MergeSortBL.srt(arr,0,r)
+
+right=len(arr)-1
+MergeSortBL.srt(arr,0,right)
 print("the sorted array is= ",arr)    
 

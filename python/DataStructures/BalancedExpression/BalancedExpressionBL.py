@@ -1,12 +1,3 @@
-# a. Desc -> Take an Arithmetic Expression such as (5+6)∗(7+8)/(4+3)(5+6)∗(7+8)/(4+3) 
-# where parentheses are used to order the performance of operations. 
-# Ensure parentheses must appear in a balanced fashion.
-# b. I/P -> read in Arithmetic Expression such as (5+6)∗(7+8)/(4+3)(5+6)∗(7+8)/(4+3) 
-# c. Logic -> Write a Stack Class to push open parenthesis “(“ and pop closed parenthesis “)”. 
-# At the End of the Expression if the Stack is Empty then the Arithmetic Expression is Balanced
-# Stack Class Methods are Stack(), push(), pop(), peek(), isEmpty(), size()
-# d. O/P -> True or False to Show Arithmetic Expression is balanced or not.
-
 class Node:
     def __init__(self,data):
         self.data=data
@@ -61,7 +52,7 @@ class stack:
         stack=[]
         open_list=['(']
         close_list=[')']
-        for i in string:
+        for i in string1:
             if(i in open_list):
                 stack.append(i)
             elif(i in close_list):
@@ -72,14 +63,3 @@ class stack:
                     return False    
         if(len(stack)==0):
             return True
-          
-
-
-#driver code
-s=stack()
-string="(5+6)∗(7+8)/(4+3)(5+6)∗(7+8)/3))"   
-if(s.checkString(string)):
-    print('the string is balanced')
-else:
-    print('the string is unbalanced')    
-

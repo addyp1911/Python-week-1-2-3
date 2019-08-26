@@ -1,35 +1,38 @@
+
+# ----------------------------------StopWatch prg-----------------------------------------------
+#StopWatch.py
+# date : 26/08/2019
+# method to print the time that elapses between the start and end clicks
+
+
 import time
 start=0
 active=False
 duration=0.0
 
-
 def start():
-    global start
-    global active
-    start=(time.time() * 1000)
     active=True
+    start_time=time.time()
+    return start_time
 
-def stop(): 
-    global duration
-    global active  
-    duration=duration+((time.time() * 1000)-start )
+def stop():
+    newDe = duration
     active=False
-
-def reset():
-    global active
-    global start
-    active=False
-    start=0
+    start_time=start()
+    newDe=newDe+(time.time()-start_time)
+    return newDe
 
 def restart():
-    stop() 
-    start() 
+    print("the time between start time and stop time",stop())
+    start()
 
-def  getElaspedTime():
-    global active
-    global start
-    if(active):
-         return duration+((time.time() * 1000)-start ) 
-    else:
-         return duration     
+def reset():
+    strt=0
+    duration=0
+
+def elapsedtime():          #method for measuring the time between start and end clicks of the stopwatch
+     duration=stop()
+     return duration    
+
+
+    

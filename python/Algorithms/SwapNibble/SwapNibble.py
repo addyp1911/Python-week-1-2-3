@@ -3,14 +3,18 @@
 # ii. Find the resultant number is the number is a power of 2.
 
 import SwapNibbleBL as sb
-obj=sb.SwapNibble()
-a=int(input("enter a decimal number "))
-bin1=obj.decTobin1(a)
 
-print(bin1) 
-swap=obj.swapNibbles(bin1)
-print("after swapping the nibbles we get")
+obj=sb.SwapNibble()
+a=int(input("enter a decimal number= "))
+
+binary1=obj.dectobin(a)
+#the binary equivalent of the decimal number is returned
+print(binary1)
+
+swap=obj.swapnibbles(binary1)        #the nibbles of the binary equivalent is swapped
+print("after swapping the nibbles we get= ")
 print(swap)
-print("decimal equivalent of the swapped bin1ary number")
-dv=obj.bin1ToDec(int(swap))
-print(dv)
+print("decimal equivalent of the swapped binary number is = ")  
+ # the final decimal result after nibble swap is obtained as follows
+result=obj.bintodec(int(swap))
+print(result)

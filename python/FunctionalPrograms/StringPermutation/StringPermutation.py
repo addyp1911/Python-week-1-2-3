@@ -3,7 +3,8 @@
 # Check if the arrays returned by two string functions are equal.
 
 import StringPermutationBL
+
 string = input("enter the string you want to permute= ")
-n = len(string) 
-data = list(string) 
-StringPermutationBL.permute(data, 0, n)
+size = len(string) 
+data = list(string)               #type casting the entered string into list type to permute it character by character
+StringPermutationBL.permute(data, 0, size)

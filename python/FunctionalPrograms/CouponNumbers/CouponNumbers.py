@@ -4,6 +4,8 @@
 # d. O/P -> total random number needed to have all distinct numbers.
 # e. Functions => Write Class Static Functions to generate random number and to 
 # process distinct coupons.
+
+
 import CouponNumbersBL
 num = int(input("enter the number of distinct coupons present: "))
 CouponNumbersBL.calculateDistinctCoupons(num)

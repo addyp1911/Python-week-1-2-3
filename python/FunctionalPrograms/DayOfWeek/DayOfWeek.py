@@ -8,8 +8,14 @@
 # x = y0 + y0/4 − y0/100 + y0/400
 # m0 = m + 12 × ((14 − m) / 12) − 2
 # d0 = (d + x + 31m0 / 12) mod 7
+
+
 import DayOfWeekBL
-m=int(input("enter the month of your date= "))
-y=int(input("enter the year of your date= "))
-d=int(input("the day of the date =  "))
-DayOfWeekBL.dayOfWeek(d,m,y)
+
+try:
+    m=int(input("enter the month of your date= "))
+    y=int(input("enter the year of your date= "))
+    d=int(input("the day of the date =  "))
+    DayOfWeekBL.dayOfWeek(d,m,y)
+except:
+    print("user please enter the valid day,year or month input")    

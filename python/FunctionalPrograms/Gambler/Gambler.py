@@ -3,8 +3,12 @@
 # of bets he/she makes. 
 # Run the experiment N times, averages the results, and prints them out.
 import GamblerBL
-cash= int(input("enter the stake with the gambler ")) 
-goals=int(input("enter the goal he has to achieve "))
-noOfTimes=int(input("the number of times he plays ")) 
-GamblerBL.gamble(cash,goals,noOfTimes)                                     
+try:
+    cash= int(input("enter the stake with the gambler ")) 
+    goals=int(input("enter the goal he has to achieve "))
+    nooftimes=int(input("the number of times he plays ")) 
+except:
+    print("enter the valid integer inputs for the data")    
+
+GamblerBL.gamble(cash,goals,nooftimes)                                     
 

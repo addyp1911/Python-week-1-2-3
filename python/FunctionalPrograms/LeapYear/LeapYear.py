@@ -4,6 +4,10 @@
 # c. O/P -> Print the year is a Leap Year or not.
 
 import LeapYearBL
-a=input("enter the year")
-year=int(a)
-LeapYearBL.checkLeapYear(year)
+
+try:
+    year=int(input("enter the year"))
+    LeapYearBL.checkLeapYear(year)
+    
+except(TypeError):
+    print("user please enter the valid year in integer format")    
