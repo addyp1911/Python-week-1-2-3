@@ -1,5 +1,0 @@
-{
-    "git.ignoreLimitWarning": true,
-    "python.formatting.provider": "autopep8",
-    "python.testing.cwd": "/home/admin1/python/functionalPrograms"
-}
