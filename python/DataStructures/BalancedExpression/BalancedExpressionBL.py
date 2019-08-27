@@ -39,7 +39,7 @@ class stack:
             print(t.data)
             t=t.next
 
-    def isEmpty(self):
+    def isempty(self):
         if(self.size==0):
             return True
         else:
@@ -48,7 +48,7 @@ class stack:
     def size(self):
         return self.size
 
-    def checkString(self,string1):
+    def checkstring(self,string1):
         stack=[]
         open_list=['(']
         close_list=[')']

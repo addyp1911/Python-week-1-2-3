@@ -13,8 +13,6 @@ def isleapyear(year):
     if((year%4==0) or(year%400==0 and year%100!=0)):
         c.days[1]=29
 
-
-
 def cal():
     a=[]  
     for i in range(7):
@@ -22,9 +20,7 @@ def cal():
     month.append(a)    
     for j in range(6):
         month.append([]) 
-        
-        
-                
+                       
 def update(start,month_no):
     k=0
     p=1
@@ -49,7 +45,6 @@ def update(start,month_no):
                     month[i].append(p)    
                 p+=1
     
-
 def display():
     for i in range(len(month)):
         for j in range(len(month[i])):

@@ -1,6 +1,6 @@
 class Palindrome:
     
-    def checkPalindrome(n):
+    def checkpalindrome(n):
         t=n
         rev=0
         while(n!=0):
@@ -9,7 +9,7 @@ class Palindrome:
         if(rev==t):
           return True
 
-    def isPrime(n):
+    def isprime(n):
         
         for i in range(2,(n//2+1)):
             if(n%i==0):
@@ -17,11 +17,3 @@ class Palindrome:
                
         return True
             
-
-    i=0
-    for i in range(10,1000):
-        if(isPrime(i)):
-            if(checkPalindrome(i)):
-                print(i)
-       
-

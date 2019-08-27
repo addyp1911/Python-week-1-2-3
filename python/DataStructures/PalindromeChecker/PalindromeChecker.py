@@ -7,11 +7,12 @@
 # the characters of the string. We will process the string from left to right
 # and add each character to the rear of the deque. 
 # O/P -> True or False to Show if the String is Palindrome or not.
+
 import PalindromeCheckerBL as pc
 
 dq=pc.Deque()
 string=input("enter the string= ")
 for i in string:
     dq.append(i)
-dq.printList()
-dq.palindromeChecker()
+dq.printlist()
+dq.palindromechecker()

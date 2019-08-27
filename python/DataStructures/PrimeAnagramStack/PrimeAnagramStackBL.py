@@ -3,7 +3,7 @@ class Node:
         self.data=data
         self.next=next
 
-class primeAnagramStack:
+class PrimeAnagramStack:
     def __init__(self):
           self.head =None
           self.size=0
@@ -35,14 +35,14 @@ class primeAnagramStack:
     def peek(self):
         return self.head.data
 
-    def printList(self):
+    def printlist(self):
         t=self.head
         while(t):
             print(t.data)
             t=t.next    
 
 
-    def isAnagram(self,num1,num2):
+    def isanagram(self,num1,num2):
         n1=str(num1)
         n2=str(num2)
         x=sorted(n1)
@@ -50,21 +50,9 @@ class primeAnagramStack:
 
         return x==y
 
-    def isPrime(self,num):
+    def isprime(self,num):
         for i in range(2,num//2+1):
             if(num%i==0):
                 return False
         return True
-
-
-
-#driver code
-ps= primeAnagramStack()
-for i in range(0,1001):
-    for j in range(i+1,1001):
-        if(ps.isPrime(i) and ps.isPrime(j)):
-            if(ps.isAnagram(i,j)):
-                ps.push(i)
-                ps.push(j)
-ps.printList()
 

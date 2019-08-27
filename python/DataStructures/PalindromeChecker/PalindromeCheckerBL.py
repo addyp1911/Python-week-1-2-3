@@ -19,7 +19,7 @@ class Deque:
         self.size+=1
         
 
-    def appendLeft(self,data):
+    def appendleft(self,data):
         new_node=Node(data)
         if(self.head is None):
             self.head=new_node
@@ -38,7 +38,7 @@ class Deque:
         return t.data    
 
          
-    def popLeft(self,index):
+    def popleft(self,index):
         t=self.head
         count=-1
         while(t):
@@ -51,11 +51,11 @@ class Deque:
         return prev.data   
       
 
-    def palindromeChecker(self):
+    def palindromechecker(self):
         f=True
-        for i in range(0,dq.size//2):
+        for i in range(0,self.size//2):
           
-            if(dq.pop()!=dq.popLeft(i)):
+            if(self.pop()!=self.popleft(i)):
                 f=False
                 break    
 
@@ -67,7 +67,7 @@ class Deque:
 
        
 
-    def printList(self):
+    def printlist(self):
         t=self.head
         while(t):
             print(t.data)

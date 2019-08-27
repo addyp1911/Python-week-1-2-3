@@ -43,7 +43,7 @@ class Stack:
         print('the size of the stack is',self.size)
 
 
-    def isEmpty(self):
+    def isempty(self):
         if(self.size==0):
             return True
         else:
@@ -62,28 +62,8 @@ class Stack:
             
         return -1    
 
-    def printStack(self):
+    def printstack(self):
         t=self.head
         while(t):
             print(t.data)
             t=t.next
-
-
-                           
-
-#driver code
-s=Stack()
-s.push(1)   
-s.push(2) 
-s.push(3) 
-s.push('hello')
-s.push('hi')
-s.printStack()
-print('popping the first element of the stack')
-s.pop()
-print("popping the element hi")
-s.pop('hi')
-s.printStack()
-s.countsize()
-print(s.search('hello'))
-print("the first element in the stack is",s.peek())

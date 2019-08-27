@@ -7,27 +7,12 @@
 # Create a Chain for each Slot to avoid Collision. 
 # If a number searched is found then pop it or else push it. 
 # O/P -> Save the numbers in a file
-slot=[]
-a=[]
 
-def count(size):
-    for i in range(size):
-        slot.append(str(i))
-    for j in range(size):
-        slot.append([])
-    print(slot)
-
-def update(value,size):
-    slot[int(value)%size+1].append(value)
-
-def display():
-    for i in slot[0]:
-        print(i,slot[i+1])
-
+import HashingBL as hb
 size=int(input("enter the size of your function= "))
-count(size)
+hb.count(size)
 for i in range(size):
     num=input("enter the number= ")
-    update(num,size)  
+    hb.update(num,size)  
    
-display()
+hb.display()

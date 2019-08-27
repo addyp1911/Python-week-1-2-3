@@ -7,7 +7,6 @@
 # Stack Class Methods are Stack(), push(), pop(), peek(), isEmpty(), size()
 # d. O/P -> True or False to Show Arithmetic Expression is balanced or not.
 
-
 import BalancedExpressionBL as be          
 
 s=be.stack()
@@ -15,7 +14,7 @@ try:
     string=input("enter the string to check if it's balanced or not= ")
 except:
     print("enter a valid expression with parantheses")
-if(s.checkString(string)):
+if(s.checkstring(string)):
     print('the string is balanced')
 else:
     print('the string is unbalanced')    
