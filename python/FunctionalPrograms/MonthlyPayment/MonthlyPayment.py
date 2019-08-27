@@ -9,7 +9,7 @@ try:
     year=int(input("enter the years over which payment needs to be made= "))
     rate=float(input("enter the rate of interest= "))
     principal=float(input("enter the principal= "))
-    mp.calculatePayment(year,rate,principal)
+    mp.calculatepayment(year,rate,principal)
     
 except(TypeError):
     print("user please enter valid inputs for the year,principal and rate of interest")    

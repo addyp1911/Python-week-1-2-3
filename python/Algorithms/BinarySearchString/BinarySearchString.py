@@ -1,4 +1,5 @@
 # binarySearch method for string array
+
 import BinarySearchBL as bs
 arr=[]                           #empty list initialised
 size=int(input("enter the size of the array= "))

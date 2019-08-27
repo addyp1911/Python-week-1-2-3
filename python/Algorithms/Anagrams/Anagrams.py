@@ -5,7 +5,6 @@
 
 import AnagramsBL as ab
 
-
 a=input("enter the first string ")
 b=input("enter the second string ")
 rs=ab.checkAnagrams(a,b)

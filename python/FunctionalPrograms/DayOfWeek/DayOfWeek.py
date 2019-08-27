@@ -16,6 +16,6 @@ try:
     m=int(input("enter the month of your date= "))
     y=int(input("enter the year of your date= "))
     d=int(input("the day of the date =  "))
-    DayOfWeekBL.dayOfWeek(d,m,y)
+    DayOfWeekBL.dayofweek(d,m,y)
 except:
     print("user please enter the valid day,year or month input")    

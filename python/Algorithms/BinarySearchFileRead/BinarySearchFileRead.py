@@ -5,8 +5,6 @@
 
 import BinarySearchFileReadBL as bs
 
-
-
 try:
     
     file1 = open("/home/admin1/Desktop/sample.txt",'r')  #opening the file in read mode

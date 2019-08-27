@@ -8,4 +8,4 @@ try:
     y=int(input("enter the y coordinate of the point= "))
 except(TypeError):
     print("valid input needed, string or float inputs not allowed")    
-DistanceBL.calculateDistance(x,y)
+DistanceBL.calculatedistance(x,y)

@@ -1,7 +1,6 @@
 #insertionSort method for String
 import InsertionSortString as io
 
-
 arr = []                       #empty list is initialised
 size = input("enter the size of the array= ")
 for i in range(size):

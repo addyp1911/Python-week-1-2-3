@@ -7,7 +7,7 @@ import LeapYearBL
 
 try:
     year=int(input("enter the year"))
-    LeapYearBL.checkLeapYear(year)
+    LeapYearBL.checkleapyear(year)
     
 except(TypeError):
     print("user please enter the valid year in integer format")    

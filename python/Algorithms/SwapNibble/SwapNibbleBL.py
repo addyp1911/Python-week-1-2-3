@@ -3,7 +3,6 @@
 # date : 26/08/2019
 # method to swap the nibbles of a decimal number after binary conversion
 
-
 class SwapNibble:
 
     def bintodec(self,bin):
@@ -24,7 +23,7 @@ class SwapNibble:
             dec //= 2
         return bin1
 
-    def swapNibbles(self,bin1):
+    def swapnibbles(self,bin1):
         l=len(bin1)
         if(l <8):
             while(l != 8):

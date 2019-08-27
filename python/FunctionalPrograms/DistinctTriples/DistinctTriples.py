@@ -18,7 +18,7 @@ except:
     print("enter the valid integer input for the data")
 
 new_arr=sorted(arr)
-DistinctTriplesBL.findtytriplets(new_arr,size)
+DistinctTriplesBL.findtriplets(new_arr,size)
 
 
 
