@@ -11,22 +11,24 @@ import json
 with open("/home/admin1/Desktop/commerciallist.json",'r') as f:
     stock_file=json.load(f)
 
-
+#adding keys to linked list
 for i in stock_file:
     cd.ll.add_node(i)
 
 cd.ll.printkey()
 
+#asking for user to update any customer detail
 update_key=input("enter the record key you would like to update?= ")
+
 if(cd.ll.check_key(update_key)):
-      update_value=input("enter the record atrribute you would like to update?= ")
+      update_value=input("enter the record attribute you would like to update?= ")
       print(cd.ll.update(update_key,update_value))
 else:
     print("invalid key") 
-
+#asking the user if he would delete any record from the existing file
 user_key=input("enter the node you would like to delete?= ")
-
 if(cd.ll.check_key(user_key)): 
     cd.ll.delete_node(user_key)
 
-print("the modified dictionary is= ",cd.ll.new_dict(stock_file))    
+#the modified stockfile is printed
+print("the modified stockfile is= ",cd.ll.new_dict(stock_file))    
