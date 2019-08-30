@@ -1,7 +1,7 @@
 # ----------------------------------StockAccountList prg-----------------------------------------------
 # StockAccountList.py
 # date : 29/08/2019
-# method to print the stock sccount details of company using linked list
+# method to print the stock account details of company using linked list
 
 # my json file stockrecord
 # {"shareholder1":{"name":"sonal k","stock":"HCL","shareprice":"2000","share_num":"30"},
@@ -49,13 +49,13 @@ class StockAccount:
   
         temp = None 
 
- #new dictionary defined to modify the existing stock file after deletion of a particular record in it 
+#new dictionary defined to modify the existing stock file after deletion of a particular record in it 
     def new_dict(self,stock_file):
         newdict={}     #initialising new dictionary
         temp=self.head        
         while(temp):           
             key=temp.data  
-#method is used to retrieve a particular shareholder detail record using key            
+#method retrieve_from_orig_dict is used to retrieve a particular shareholder detail record using key            
             value=ll.retrieve_from_orig_dict(key,stock_file)
             newdict.update({key:value})
             temp=temp.next
@@ -86,6 +86,9 @@ class StockAccount:
                                 new=input("enter the new value= ")
                                 file[k][j]=new 
                                 return file
+            
+
+
             t=t.next 
 
 

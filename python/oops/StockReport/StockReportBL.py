@@ -11,17 +11,18 @@ class StockPortFolio:
 #retrieving the key-value pairs in stock dictionary
 
     for key,value in stock_dict.items():
-       
         stockvalue=1
         print(value)
 #printing the values(which are stored as nested dictionary for the customer details of each customer in the record) within the stock dictionary 
-        for j in value:                          #we retrieve the keys of the nested dictionary
-#if the key value is share_num we ask the user if he wants to update his number of shares             
-            if(j=='share_num'):
+        for j in value:                 #we retrieve the keys of the nested dictionary
+           
+            if(j=='share_num'):         #if the key value is share_num we ask the user 
+                if he wants to update his number of shares  
                 new_count=int(input("enter the number of shares if you want to update the shares you own?= "))
+                
                 if(new_count==0):
-                    share_count=value.get(j)         #if he doesn't then the share_num is fetched from the stock record in json file 
-                    stockvalue*=int(share_count)     #updating the price of the stock
+                    share_count=value.get(j)         #if he doesn't then the share_num is fetched from
+                    stockvalue*=int(share_count)     # the stock record in json file updating the price of the stock
                     print("the number of shares of the stock is= ",stockvalue) 
 
                 else:

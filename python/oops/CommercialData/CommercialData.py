@@ -2,6 +2,7 @@ import json
 import datetime
 with open("/home/admin1/Desktop/commercial.json",'r') as f:
     stock=json.load(f)
+    
 new_dict={} 
 di={} 
 def sellshare(name):
