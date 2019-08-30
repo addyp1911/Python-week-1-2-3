@@ -13,6 +13,6 @@ import json
 import StockReportBL as sr
 with open("/home/admin1/Desktop/stock.json",'r') as f:
     stock_dict=json.load(f)
-    obj=sr.StockPortFolio
+    obj=sr.StockPortFolio()
     obj.extract_record(stock_dict)
     obj.print_stocklist(stock_dict)
