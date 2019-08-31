@@ -30,24 +30,20 @@ class StockAccount:
         self.head=new_node
 
 #method to delete the specific node as entered by the user , using the key
-    def delete_node(self, key): 
-
-        temp = self.head 
-        if (temp is not None): 
-            if (temp.data == key): 
-                self.head = temp.next
-                temp = None
-                return 
-        while(temp is not None): 
-            if temp.data == key: 
-                break 
-            prev = temp 
-            temp = temp.next 
-        if(temp == None): 
-            return 
-        prev.next = temp.next 
-  
-        temp = None 
+    
+    def delete_node(self,data):
+        t=self.head
+        while(t.next.next!=None):
+            if(t==None):
+                return
+            elif(t!=None and t.data==data):
+                self.head=self.head.next
+            else:
+                while(t!=None and t.data!=data):
+                    prev=t
+                    t=t.next  
+                prev.next=t.next
+            t=t.next 
 
 #new dictionary defined to modify the existing stock file after deletion of a particular record in it 
     def new_dict(self,stock_file):

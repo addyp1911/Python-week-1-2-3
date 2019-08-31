@@ -58,7 +58,9 @@ class Stack:
         if(self.top is None):
             print("the stack is underflow")
         else:
-            return self.top.data   
+            data=self.top.data
+            self.top=self.top.next
+            return data   
          
 #to check whether a record is present in the stock file or not 
     def check_key(self,key,file):

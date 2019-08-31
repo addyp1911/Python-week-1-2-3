@@ -14,32 +14,39 @@ with open("/home/admin1/Desktop/commerciallist.json",'r') as f:
     stock_symbol=json.load(f)
 
 s=sb.Stack()
-i=input("1.type 1 for push\n2.type 2 for pop \n3.type 3 for printing the stack\n")
-if(i==1):
-    for k,v in stock_symbol.items():
-        s.push(k)
-    i=input("print or pop?= ")
+
+for i in range(1,5):
+
+    i=int(input("1.enter 1 to print the stock record of the company\n2.enter 2 to buy any stock\n3.enter 3 to pop the first stock in the record\n4.enter 4 to sell any stock 5.enter 5 to print the updated stock file\n6.enter 6 to exit the operation\n"))
+    if(i==1):
+        for k,v in stock_symbol.items():
+            s.push(k)
+        s.printkey()    
+        continue
+
     if(i==2):
+            stocksymbol=input("enter the stock symbol whose shares are purchased ") 
+            shares=input("enter the number of shares bought= ") 
+            price=input("enter the share price= ")
+            print("the updated stock file is: ")
+            s.update(stocksymbol,shares,price,stock_symbol)
+
+    if(i==3):
         print("the first stock symbol popped out is= ",s.pop())    
         print("the stack of the stock symbols is= ")    
         s.printkey()
 
-    elif(i==3):
-        s.printkey() 
+    if(i==4):
+        stock=input("enter the stock symbol you want to sell= ")
+        if(s.check_key(stock,stock_symbol)):
+            s.sold(stock)
+            print("the remaining stock_symbols are= ")
+            s.printkey()
+        else:
+            print("invalid record") 
 
+    if(i==5):
+        print(stock_symbol)
 
-stocksymbol=input("enter the stock symbol whose shares are purchased ") 
-shares=input("enter the number of shares bought= ") 
-price=input("enter the share price= ")
-
-print("the updated stock file is: ")
-s.update(stocksymbol,shares,price,stock_symbol)
-
-stock=input("enter the stock symbol you want to sell= ")
-if(s.check_key(stock,stock_symbol)):
-    s.sold(stock)
-    print("the remaining stock_symbols are= ")
-    s.printkey()
-else:
-    print("invalid record")
-
+    if(i==6):
+        exit()    

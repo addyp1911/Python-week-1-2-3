@@ -23,7 +23,6 @@ class LinkedList:
             if(t==None):
                 return
             elif(t!=None and t.data==name):
-                print(t,"kkkkkk")
                 self.head=self.head.next
             else:
                 while(t!=None and t.data!=name):
