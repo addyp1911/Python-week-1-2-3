@@ -34,7 +34,10 @@ for i in range(1,5):
         sq.q.printqueue()
         
     if(i==4):
+        #printing the updated stock file and writing the updated stock records into the json file
         print(stockfile)
+        with open("/home/admin1/Desktop/commerciallist.json",'w') as f:
+               json.dump(stockfile,f)   
 
     if(i==5):
         exit()    
