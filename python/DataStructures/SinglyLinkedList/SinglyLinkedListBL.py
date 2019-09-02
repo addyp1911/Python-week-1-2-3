@@ -22,27 +22,35 @@ class LinkedList:
     def addlast(self,data):
         new_node=Node(data)
         if(self.head is None):
-            head=new_node
+            self.head=new_node
             return
-        t=self.head
-        while(t.next!=None):
-            t=t.next
-        t.next=new_node
+        temp=self.head
+        while(temp.next is not None):
+            temp=temp.next
+        temp.next=new_node
                
     def insertafter(self,prev_node,data):
         new_node=Node(data)
         if(prev_node==None):
             print("the previous node value should be there ")
-        t=prev_node.next
+        temp=prev_node.next
         prev_node.next=new_node
-        new_node.next=t    
+        new_node.next=temp    
 
     def removefirst(self):
-        data=self.head.data
-        head=self.head.next
-
+        if(self.head is None):
+		print("the list is empty")
+		return
+        self.head=self.head.next
+	
+    def removelast(self):
+	temp=self.head
+	while(temp.next.next):
+	    temp=temp.next
+        temp.next=None		
+	
     def printlist(self):
-        t=self.head
-        while(t):
-            print(t.data)
-            t=t.next
+        temp=self.head
+        while(temp):
+            print(temp.data)
+            temp=temp.next
