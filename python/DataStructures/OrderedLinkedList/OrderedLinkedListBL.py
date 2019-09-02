@@ -10,34 +10,48 @@ class LinkedList:
     def addfirst(self,data):
         new_node=Node(data)
         if(self.head is None):
-            new_node.next=self.head
             self.head=new_node
-
+            return
         new_node.next=self.head
+        self.head=new_node
 
     def addlast(self,data):
         new_node=Node(data)
-        t=self.head
-        while(t.next!=None):
-            t=t.next
-        t.next=new_node
+        temp=self.head
+        while(temp.next is not None):
+            temp=temp.next
+        temp.next=new_node
 
-    def sort(self,list1):
-       
-        i=j=temp=0
-        n=len(list1)
-
-        for i in range(0,n):
-            for j in range(0,n-i-1):
-                if(list1[j]>list1[j+1]):
-                    temp=list1[j]
-                    list1[j]=list1[j+1]
-                    list1[j+1]=temp
-        return list1            
-
+    def sort(self):
+        temp=self.head
+        while(temp):
+            new_temp=temp.next
+            while(new_temp):
+                if(temp.data>new_temp.data):
+                    t=temp.data
+                    temp.data=new_temp.data
+                    new_temp.data=t
+                new_temp=new_temp.next
+            temp=temp.next    
+    
+    def removefirst(self):
+        temp=self.head
+        if(self.head is None):
+            print("the list is empty")
+            return
+        self.head=self.head.next
+     
+    def removelast(self):
+        temp=self.head
+        if(self.head is None):
+            print("the list is empty")
+            return
+        while(temp.next.next):
+            temp=temp.next
+        temp.next=None    
         
     def printlist(self):
-        t=self.head
-        while(t):
-            print(t.data)
-            t=t.next
+        temp=self.head
+        while(temp):
+            print(temp.data)
+            temp=temp.next
