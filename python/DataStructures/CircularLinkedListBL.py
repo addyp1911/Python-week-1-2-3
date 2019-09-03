@@ -49,3 +49,21 @@ class CircularLinkedList:
             print(temp.data)
             temp=temp.next
         print(temp.data)
+        
+        
+    def split(self):
+    n1=self.head
+    n2=self.head
+    while(n1.next.next!=self.head and n1.next!=self.head):
+        n2=n1.next
+        n1=n1.next.next
+
+    if(n1.next.next==self.head):
+        n1=n1.next
+    head1=self.head
+    head2=n2.next
+    n1.next=head2
+    n2.next=head1
+    cl.printlist(head1)
+    cl.printlist(head2)
+    
