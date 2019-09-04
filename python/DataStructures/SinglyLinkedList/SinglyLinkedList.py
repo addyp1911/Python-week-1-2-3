@@ -2,7 +2,7 @@
 #implementing a singlylinkedlist and asking the user to enter the data into it
 
 import SinglyLinkedListBL as sl
-ls = sl.LinkedList() 
+ls = sl.SinglyLinkedList() 
 size=int(input("enter the size of the linkedlist= "))
 for i in range(size):
     data=input("enter the element= ")

@@ -1,3 +1,8 @@
+# ----------------------------------Hashing prg-----------------------------------------------
+# Hashing.py
+# date : 26/08/2019
+# method to implement the hashing algorithm
+
 slot=[]
 a=[]
 

@@ -1,5 +1,5 @@
 # ----------------------------------Deckofcards prg-----------------------------------------------
-# -Deckofcards.py
+# Deckofcards.py
 # date : 30/08/2019
 # method to print the shuffle the cards using Random method and then
 # distribute 9 Cards to 4 Players and Print the Cards the received by the 4 Players
@@ -28,11 +28,13 @@ def shufflecards(player_num,cards):
     
     #to print the header of the display as player names
     for i in range(0,player_num):
-        print("player{}".format(i+1),end="\t")
+        print("    player{}".format(i+1),end="\t")
 
     #method to print the shuffled cards among user entered no of players
+
     for i in matrix:
         for j in range(len(i)):
             if(j % player_num == 0):
                 print()
-            print(' {} \t'.format(i[j]),end='')
+            # print(' {} \t'.format(i[j]),end='')
+            print('%15s'%(i[j]),end='')

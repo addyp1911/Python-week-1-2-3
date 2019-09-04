@@ -1,3 +1,8 @@
+# ----------------------------------BalancedExpression prg-----------------------------------------------
+# BalancedExpression.py
+# date : 26/08/2019
+# method to check for a balanced expression by implementing a stack
+
 class Node:
     def __init__(self,data):
         self.data=data

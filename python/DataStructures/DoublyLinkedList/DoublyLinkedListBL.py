@@ -1,9 +1,17 @@
+<<<<<<< HEAD
+# ----------------------------------DoublyLinkedList prg-----------------------------------------------
+# DoublyLinkedList.py
+# date : 26/08/2019
+# method to implement an DoublyLinkedList
+=======
+>>>>>>> 8fe8be723c476187e1b13f5f22e9069af8611f62
 
 class Node:
     def __init__(self,data):
         self.data=data
         self.next=None
         self.prev=None
+
 class DoublyLinkedList:
     def __init__(self):
         self.head=None

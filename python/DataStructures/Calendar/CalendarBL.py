@@ -1,3 +1,10 @@
+# ----------------------------------Calendar prg-----------------------------------------------
+# Calendar.py
+# date : 26/08/2019
+# method to store the Calendar in an 2D Array,the first dimension as
+# the week of the month and the second dimension stores the day of the week. 
+
+
 day_name=['su',' m',' t',' w',' t','fr','sa']
 days=[31,28,31,30,31,30,31,31,30,31,30,31]
 month=[]

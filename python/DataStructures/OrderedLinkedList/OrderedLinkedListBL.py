@@ -1,9 +1,13 @@
+# ----------------------------------OrderedLinkedList prg-----------------------------------------------
+# OrderedLinkedList.py
+# date : 26/08/2019
+# method to implement an orderedlinked list
 class Node:
     def __init__(self,data):
           self.data = data
           self.next=None
 
-class LinkedList:
+class OrderedLinkedList:
     def __init__(self):
         self.head=None
 
@@ -35,7 +39,10 @@ class LinkedList:
             temp=temp.next    
     
     def removefirst(self):
+<<<<<<< HEAD
+=======
         temp=self.head
+>>>>>>> 8fe8be723c476187e1b13f5f22e9069af8611f62
         if(self.head is None):
             print("the list is empty")
             return
@@ -54,4 +61,8 @@ class LinkedList:
         temp=self.head
         while(temp):
             print(temp.data)
+<<<<<<< HEAD
             temp=temp.next
+=======
+            temp=temp.next
+>>>>>>> 8fe8be723c476187e1b13f5f22e9069af8611f62

@@ -1,3 +1,9 @@
+# ---------------------------------CashCounter prg-----------------------------------------------
+# BinarySearchFileRead.py
+# date : 26/08/2019
+# method to execute the cash counter program by implementing a queue
+
+
 class Node:
     def __init__(self,data):
         self.data=data

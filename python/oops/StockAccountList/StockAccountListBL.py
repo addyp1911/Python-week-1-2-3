@@ -44,8 +44,8 @@ class StockAccount:
                     t=t.next  
                 prev.next=t.next
             t=t.next 
-
 #new dictionary defined to modify the existing stock file after deletion of a particular record in it 
+    
     def new_dict(self,stock_file):
         newdict={}     #initialising new dictionary
         temp=self.head        

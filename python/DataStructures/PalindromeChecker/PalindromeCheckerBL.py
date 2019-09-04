@@ -1,18 +1,23 @@
+# ----------------------------------PalindromeChecker prg-----------------------------------------------
+# PalindromeChecker.py
+# date : 26/08/2019
+# method to check whether a string is a palindrome or not by implementing a deque 
+
 class Node:
     def __init__(self, data):
           self.data = data
           self.next=None
 class Deque:
     def __init__(self):
-          self.head=None
+          self.front=None
           self.size=0
 
     def append(self,data):
         new_node=Node(data)
-        if(self.head is None):
-            self.head=new_node
+        if(self.front is None):
+            self.front=new_node
             return 
-        t=self.head
+        t=self.front
         while(t.next!=None):
             t=t.next
         t.next=new_node
@@ -21,15 +26,15 @@ class Deque:
 
     def appendleft(self,data):
         new_node=Node(data)
-        if(self.head is None):
-            self.head=new_node
+        if(self.front is None):
+            self.front=new_node
             return 
-        new_node.next=self.head
-        self.head=new_node
+        new_node.next=self.front
+        self.front=new_node
         self.size+=1
 
     def pop(self):
-        t=self.head
+        t=self.front
         prev=None
         while(t.next!=None):
             prev=t
@@ -39,14 +44,14 @@ class Deque:
 
          
     def popleft(self,index):
-        t=self.head
+        t=self.front
         count=-1
         while(t):
             count+=1
             if(count==index):
                 prev=t
                 t=t.next
-                self.head=t
+                self.front=t
                 break
         return prev.data   
       
@@ -68,7 +73,7 @@ class Deque:
        
 
     def printlist(self):
-        t=self.head
+        t=self.front
         while(t):
             print(t.data)
             t=t.next        

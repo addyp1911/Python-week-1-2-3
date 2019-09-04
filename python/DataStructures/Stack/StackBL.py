@@ -1,3 +1,9 @@
+# ----------------------------------Stack prg-----------------------------------------------
+# Stack.py
+# date : 26/08/2019
+# method to implement the stack with the library methods
+
+
 class Node:
     def __init__(self,data):
           self.data=data
@@ -6,15 +12,16 @@ class Stack:
     def __init__(self):
           self.head=None 
           self.size=0
+
     def push(self,data):
         new_node=Node(data)
         if(self.head is None):
             self.head=new_node
             return
-        t=self.head
-        while(t.next!=None):
-            t=t.next
-        t.next=new_node
+        temp=self.head
+        while(temp.next!=None):
+            temp=temp.next
+        temp.next=new_node
         self.size+=1
 
     def pop(self,data=None):
@@ -27,12 +34,12 @@ class Stack:
             self.size-=1
             return obj
         else:   
-            t=self.head
-            while(t!=None and t.data!=data):
+            temp=self.head
+            while(temp!=None and temp.data!=data):
                 prev=t
-                t=t.next
-            if(t!=None):
-                prev.next=t.next 
+                temp=temp.next
+            if(temp!=None):
+                prev.next=temp.next 
             else:
                 print("the number not found")  
 
@@ -51,19 +58,18 @@ class Stack:
 
 
     def search(self,data):
-        t=self.head
+        temp=self.head
         count=self.size-1
-        while(t):
-            if(t.data==data):
+        while(temp):
+            if(temp.data==data):
                 return count
-                break
-            t=t.next
+            temp=temp.next
             count-=1
             
         return -1    
 
     def printstack(self):
-        t=self.head
-        while(t):
-            print(t.data)
-            t=t.next
+        temp=self.head
+        while(temp):
+            print(temp.data)
+            temp=temp.next

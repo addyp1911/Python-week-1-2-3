@@ -1,3 +1,8 @@
+# ----------------------------------CircularLinkedList prg-----------------------------------------------
+# CircularLinkedList.py
+# date : 26/08/2019
+# method to implement a CircularLinkedList
+
 class Node:
     def __init__(self,data):
         self.data=data
@@ -66,4 +71,3 @@ class CircularLinkedList:
     n2.next=head1
     cl.printlist(head1)
     cl.printlist(head2)
-    

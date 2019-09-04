@@ -1,3 +1,8 @@
+# ----------------------------------PrimeAnagramStack prg-----------------------------------------------
+# PrimeAnagramStack.py
+# date : 26/08/2019
+# method to store the prime anagrams within the range in an implemented stack
+
 class Node:
     def __init__(self, data):
         self.data=data
@@ -29,7 +34,7 @@ class PrimeAnagramStack:
         return obj
 
 
-    def size(self):
+    def count_size(self):
         return self.size        
 
     def peek(self):
@@ -47,7 +52,6 @@ class PrimeAnagramStack:
         n2=str(num2)
         x=sorted(n1)
         y=sorted(n2)
-
         return x==y
 
     def isprime(self,num):

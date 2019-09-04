@@ -1,38 +1,44 @@
+# ---------------------------------- AnagramQueue prg-----------------------------------------------
+# AnagramQueue.py
+# date : 26/08/2019
+# method to store only the anagram primes by implementing a queue
 
 class Node:
     def __init__(self, data):
           self.data = data
-          self.head=None
+          self.next=None
 class Queue:
     def __init__(self):
-          self.head=None
-              
+        self.front=None
+        self.rear=None    
 
     def enqueue(self,data):
         new_node=Node(data)
-        if(self.head is None):
-            self.head=new_node 
+        if(self.front is None):
+            self.front=new_node 
             return
-        t=self.head
-        while(t.next!=None):
-            t=t.next
-        t.next=new_node
+        temp=self.front
+        while(temp.next!=None):
+            temp=temp.next
+        temp.next=new_node
+        self.rear=new_node
 
     def dequeue(self):
-        if(self.head is None):
+        temp=self.front
+        if(self.front is None):
             print("the list is empty")
             return
-
-        obj=self.head.data
-        self.head=self.head.next
-        return obj
-
+        while(temp.next.next!=None):
+            temp=temp.next
+        temp.next=None
+        self.rear=temp        
+       
     def isanagram(self,num1,num2):
         n1=str(num1)
         n2=str(num2)
-        sorted(n1)
-        sorted(n2)
-        return n1==n2
+        x=sorted(n1)
+        y=sorted(n2)
+        return x==y
 
     def isprime(self,num):
         for i in range(2,num//2):
@@ -40,15 +46,10 @@ class Queue:
                 return False
         return True
 
-    def add(self,size):
-        for i in range(1,size):
-            for j in range(i+1,size):
-                if(isprime(i) and isprime(j)):
-                    if(isanagram(i,j)):
-                        enqueue(i)
-                        enqueue(j)
     def printlist(self):
-        t=self.head
-        while(t):
-            print(t.data)
-            t=t.next
+        temp=self.front
+        while(temp):
+            print(temp.data)
+            temp=temp.next
+    
+       

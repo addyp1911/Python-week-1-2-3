@@ -3,8 +3,12 @@
 # can be used.
 
 import AnagramQueueBL as aq
+q=aq.Queue() 
+for i in range(0,1001):
+    for j in range(i+1,1001):
+        if(q.isprime(i) and q.isprime(j)):
+            if(q.isanagram(i,j)):
+                q.enqueue(i)
+                q.enqueue(j)
 
-size=int(input("enter the size of the queue= "))
-q=aq.Queue()
-q.add(size)
 q.printlist()
