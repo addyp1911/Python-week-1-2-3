@@ -6,7 +6,7 @@
 
 import json
 import CommercialDataBL as cd
-with open("/home/admin1/Desktop/commerciallist.json",'r') as f:
+with open("Commerciallist.json",'r') as f:
     stock_file=json.load(f)
 
 for i in range(1,4):

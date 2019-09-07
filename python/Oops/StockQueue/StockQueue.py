@@ -5,12 +5,7 @@ import datetime
 import json
 import StockQueueBL as sq
 
-#json stockfile
-# {
-#   "Pepsi":{"share_num":"23","share_price":"3000"},"Metroshoes":{"share_num":"15","share_price":"1500"},"Maybelline":{"share_num":"50","share_price":"2000"}
-# }
-
-with open("/home/admin1/Desktop/commerciallist.json",'r') as f:
+with open("Commerciallist.json",'r') as f:
     stockfile=json.load(f)
 
 

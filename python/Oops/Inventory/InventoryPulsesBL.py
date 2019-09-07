@@ -3,28 +3,32 @@
 # date : 27/08/2019
 # method to print the inventory records
 
+import json
+class Inventory:
 
-def calculate_total_price(inventory_dict):
-    for key,value in inventory_dict.items():
-        calc_tot=1
-        for j in value:
-#retrieving the quantity of a particular category of foodstock            
-            if(j=='quantity'):     
-                quantity=value.get(j)
-                calc_tot*=int(quantity)
-#retrieving the price per kg of the category                
-            if(j=='price per kg'):
-                price=value.get(j)
-#the total price of the inventory stock is printed                
-                print("the total price of the inventory stock of this category is= ",calc_tot*int(price))   
+    try:
+        def __init__(self):
+            with open("pulses_inventory.json", "r") as my_file:
+                self.inventory = json.load(my_file)
+                print(self.inventory)    
+                                       # load() converts file into python object from json
+                                       #inventory is a dictionary
 
-
-def print_inventory_record(inventory_dict):
-#the entire inventory record list is printed    
-    for key,value in inventory_dict.items():
-        print()
-        for k,v in value.items():
-            print(k,v,end=" ") 
-    print()           
+        def print_record(self):
+            for records in range(len(self.inventory["inventory"])):
+                print(self.inventory["inventory"][records])
+     
+        def calculate_total_price(self):
+            total_price=0
+            for records in range(len(self.inventory["inventory"])):
+                for key,value in self.inventory["inventory"][records].items():
+                    if(key =="quantity"):
+                        total_price=int(self.inventory["inventory"][records][key])
+                    if(key=="price per kg"):
+                        total_price*=int((self.inventory["inventory"][records][key]))
+                print("the total price of "+self.inventory["inventory"][records]["name"]+" is",total_price)
+            
+    except(FileNotFoundError):
+        print("the file cannot be found")        
 
 

@@ -1,0 +1,23 @@
+{
+    "inventory":
+    [
+    { 
+    "name":"wheat",
+     "quantity": "100",
+     "price per kg": "30"
+    },
+    
+    { 
+    "name":"maize",
+    "quantity": "80",
+    "price per kg": "30"
+    },
+    
+    { "name":"rice",
+     "quantity": "100",
+     "price per kg": "60"
+    }
+    ]
+    
+}
+    

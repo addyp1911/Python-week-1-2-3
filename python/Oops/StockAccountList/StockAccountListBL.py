@@ -46,47 +46,7 @@ class StockAccount:
             t=t.next 
 #new dictionary defined to modify the existing stock file after deletion of a particular record in it 
     
-    def new_dict(self,stock_file):
-        newdict={}     #initialising new dictionary
-        temp=self.head        
-        while(temp):           
-            key=temp.data  
-#method retrieve_from_orig_dict is used to retrieve a particular shareholder detail record using key            
-            value=ll.retrieve_from_orig_dict(key,stock_file)
-            newdict.update({key:value})
-            temp=temp.next
-        return newdict   
-
-    def retrieve_from_orig_dict(self,key,stock_file):
-        for k,v in stock_file.items():
-            if(k==key):
-                value=stock_file.get(k)
-#the shareholder details corresponding to the particular key is returned                
-                return value 
-   
-    def printkey(self):
-        t=self.head
-        while(t):
-            print(t.data," ")
-            t=t.next
-
-#method to update any attribute(name,share_num,stock_name)of any shareholder in the stockfile     
-    def update(self,key,change_var,file):
-        t=self.head
-        while(t.next!=None):
-            if(t.data==key):   
-                for k,v in file.items():
-                    if(k==key):
-                        for j in file[k]:
-                            if(j==change_var):
-                                new=input("enter the new value= ")
-                                file[k][j]=new 
-                                return file
-            
-
-
-            t=t.next 
-
+  
 
 #method to check whether a particular record is present in the stock file
     def check_key(self,key,file):

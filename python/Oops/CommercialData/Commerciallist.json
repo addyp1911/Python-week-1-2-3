@@ -1,0 +1,9 @@
+{"Pepsi": 
+    {"share_num": 68, "share_price": "3000"}, 
+ "Metroshoes": 
+    {"share_num": "15", "share_price": "1500"}, 
+ "Maybelline":
+     {"share_num": "50", "share_price": "2000"}, 
+ "Activa": 
+    {"share_num": "456", "share_price": "450"}
+}
