@@ -75,18 +75,18 @@ if __name__ == "__main__":
         i=int(input("1.enter 1 to add a new person to addressbook\n2.enter 2 to delete a person\n3.enter 3 to sort the addressbook by lastname\n4.enter 4 to update the addressbook\n5. enter 5 to exit the application\n6.enter 6 to sort the addressbook by zipcode\n"))     
         if i ==1:
             a.add()
+        elif i==2:
+            name=input("enter the name of the person whose record you would delete= ")
+            a.delete_person(name)
+        elif i==3:
+            a.sort_by_name()  
         elif i==4:
             index=int(input("enter the index of the addressbook you would update= "))
             key=input("enter the detail you'd like to update= ")
             if(key=="name"):
                 print("cannot update name!")
             else:
-                a.update(key,index)
-        elif i==2:
-            name=input("enter the name of the person whose record you would delete= ")
-            a.delete_person(name)
-        elif i==3:
-            a.sort_by_name()    
+                a.update(key,index)    
         elif i==5:
             exit()
             break
