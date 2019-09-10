@@ -1,0 +1,20 @@
+{"stockaccount":
+    [{  
+        "name":"sonal kalwani",
+        "stock":"nestle",
+        "shares":"200",
+        "share_price":"1000"  
+    },
+    {
+        "name":"trishna das",
+        "stock":"art of living",
+        "shares":"500",
+        "share_price":"1500"     
+    },
+    {
+        "name":"pooja adhikari",
+        "stock":"soil",
+        "shares":"10",
+        "share_price":"500" 
+    }]
+}
