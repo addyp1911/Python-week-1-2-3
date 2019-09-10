@@ -83,7 +83,7 @@ if __name__ == "__main__":
             else:
                 a.update(key,index)
         elif i==2:
-            name=input("enter the name pf the person whose record you would delete= ")
+            name=input("enter the name of the person whose record you would delete= ")
             a.delete_person(name)
         elif i==3:
             a.sort_by_name()    
